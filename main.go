@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"os"
 	"sort"
 	"strconv"
@@ -63,10 +64,18 @@ func main() {
 	// print the median (middle) value from the list
 	fmt.Printf("Median (middle) is: %.2f\n", median)
 
-	// Calculate the Variance of the values from the external file
+	// Calculate the Average Mean of the values from the external file
 	meanv := 0.0
 	countv := float64(len(values))
 	for _, numv := range values {
 		meanv += float64(numv) / countv
 	}
+	// Calculate the Variance of the Average Mean value from the external file
+	variancev := 0.0
+	for _, numv := range values {
+		diff := float64(numv) - meanv
+		variancev += math.Pow(diff, 2) / countv
+	}
+	// print the Variance value
+	fmt.Printf("Variance value: %.2f\n", variancev)
 }

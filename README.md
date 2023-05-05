@@ -11,14 +11,14 @@
     *   calculate the Mode
 
 ### Average Mean
-*   the average mean of a range of numerical values is, the sum of the values in the range, divided by the the range (amount) of numbers in the list.
+*   the *Average Mean*  of a range of numerical values is, the sum of the values in the range, divided by the the range (amount) of numbers in the list.
 *   ex: 2, 5, 6, 9, 12, 2, 3, 2, 7, 9
     *   the range of numbers in the list is 10,
     *   the sum of the values in the list is 57
     *   the average mean is 5.7 from the sum 57 divided by 10
 
 ### Median
-*   the median of a range of numerical values is the value that is in the middle of the range
+*   the *Median*  of a range of numerical values is the value that is in the middle of the range
 *   sort the range of numbers in ascending order
 *   find the middle position; if there isn't a single value in the middle; add together the two middle values and divide by 2
 *   ex: 2, 5, 6, 9, 12, 2, 3, 2, 7, 9
@@ -29,7 +29,7 @@
     *   the median is 11 / 2 = 5.5
 
 ### Variance
-*   the variance is the measure of how spread out numbers are.
+*   the *Variance*  is the measure of how spread out numbers are.
 *   it is the *average* of the **squared differences** from the Mean.
 *   to calculate the variance follow these steps:
     *   work out the Mean (the simple average of the numbers)
@@ -56,7 +56,7 @@
 *   lower value of *one SD* is *average mean* (5.7) subtract 3.348 = 2.352
 
 ### Range
-*   the *range*  is the **difference** between the highest and lowest values in a set of numbers; **NOT** the amount of values in the list.
+*   the *Range*  is the **difference** between the highest and lowest values in a set of numbers; **NOT** the amount of values in the list.
 *   to find range value; subtract the lowest number in the distribution from the highest.
 *   using the above list as an ex: 2, 5, 6, 9, 12, 2, 3, 2, 7, 9
     *   re-arrange the number is order: 2, 2, 2, 3, 5, 6, 7, 9, 9, 12
