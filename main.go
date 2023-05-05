@@ -64,7 +64,7 @@ func main() {
 	// print the median (middle) value from the list
 	fmt.Printf("Median (middle) is: %.2f\n", median)
 
-	// Calculate the Average Mean of the values from the external file
+	// Calculate the Average Mean of the values from the external file for Variance
 	meanv := 0.0
 	countv := float64(len(values))
 	for _, numv := range values {
@@ -78,4 +78,9 @@ func main() {
 	}
 	// print the Variance value
 	fmt.Printf("Variance value: %.2f\n", variancev)
+
+	// Calculate the Standard Deviation of the values from the external file via the Variance value
+	standardDeviation := math.Sqrt(variancev)
+	// print the Standard Deviation value
+	fmt.Printf("Standard Deviation value: %.2f\n", standardDeviation)
 }
