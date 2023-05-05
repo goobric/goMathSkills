@@ -28,18 +28,20 @@ func mode(file string) ([]int, error) {
 		// count the integer
 		counts[num]++
 	}
+	fmt.Println("number of occurances of each value from file: ", counts)
 
 	// find the mode(s)
 	var modeNums []int
-	var modeCount int
+	var ModeCount int
 	for num, count := range counts {
-		if count > modeCount {
+		if count > ModeCount {
 			modeNums = []int{num}
-			modeCount = count
-		} else if count == modeCount {
+			ModeCount = count
+		} else if count == ModeCount {
 			modeNums = append(modeNums, num)
 		}
 	}
+	fmt.Println("occurrences of mode value:", ModeCount)
 
 	return modeNums, nil
 }
@@ -52,4 +54,5 @@ func main() {
 	}
 	fmt.Println("Mode(s) value:", modeNums)
 	//fmt.Println("number of lines in dataM.txt:", lineCount)
+	//fmt.Println("the modulus number: %d, had %d occurrences", modeNums, ModeCount)
 }
