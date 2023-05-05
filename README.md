@@ -73,3 +73,5 @@
     *   2(3times), 3(once), 5(once), 6(once), 7(once), 9(twice), 12(once)
     *   the **most** occuring value in the list is 2 (3 occasions)
     *   the mode value for the list is 2
+
+reference information [Mathsisfun](https://www.mathsisfun.com)
