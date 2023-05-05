@@ -45,10 +45,11 @@ func mode(file string) ([]int, error) {
 }
 
 func main() {
-	modeNums, err := mode("data.txt")
+	modeNums, err := mode("dataM.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println("Mode(s) value:", modeNums)
+	//fmt.Println("number of lines in dataM.txt:", lineCount)
 }

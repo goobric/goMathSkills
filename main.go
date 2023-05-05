@@ -1,52 +1,12 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"math"
 	"os"
 	"sort"
 	"strconv"
-	"strings"
 )
-
-func mode(file string) (int, error) {
-	// open the file
-	file, err := os.Open("data.txt")
-	if err != nil {
-		return 0, err
-	}
-	defer f.Close()
-
-	// read the file line by line
-	counts := make(map[int]int)
-	scanner := bufio.NewScanner(f)
-	for scanner.Scan() {
-		line := scanner.Text()
-		// split the line by commas
-		parts := strings.Split(line, ",")
-		// convert each part to an integer and count it
-		for _, part := range parts {
-			num, err := strconv.Atoi(part)
-			if err != nil {
-				return 0, err
-			}
-			counts[num]++
-		}
-	}
-
-	// find the mode
-	var modeNum int
-	var modeCount int
-	for num, count := range counts {
-		if count > modeCount {
-			modeNum = num
-			modeCount = count
-		}
-	}
-
-	return modeNum, nil
-}
 
 func main() {
 	fmt.Println("Welcome to the Math Skills Project")
@@ -57,12 +17,6 @@ func main() {
 		fmt.Println("error reading external file")
 		panic(err)
 	}
-	modeNum, err := mode("data.txt")
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	// fmt.Println("Mode:", modeNum)
 	defer file.Close()
 
 	// Initialize variables for calculating the average mean
@@ -129,41 +83,4 @@ func main() {
 	standardDeviation := math.Sqrt(variancev)
 	// print the Standard Deviation value
 	fmt.Printf("Standard Deviation value: %.2f\n", standardDeviation)
-
-	var modeNum int
-	var modeCount int
-	for nump, count := range counts {
-		if count > modeCount {
-			modeNum = nump
-			modeCount = count
-		}
-	}
-	fmt.Println("Mode:", modeNum)
-}
-
-// Calculate the Mode of the values from the external file
-func mode(file string) (int, error) {
-	// open the external file
-	file, err := os.Open(file)
-	if err != nil {
-		return 0, err
-	}
-	defer file.Close()
-
-	// read the external file line by line
-	counts := make(map[int]int)
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		line := scanner.Text()
-		// split the line by commas
-		parts := strings.Split(line, ",")
-		// convert each part to an integer and count the number of parts
-		for _, part := range parts {
-			nump, err := strconv.Atoi(part)
-			if err != nil {
-				return
-			}
-			counts[nump]++
-		}
-	}
 }
